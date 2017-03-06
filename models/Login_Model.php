@@ -1,8 +1,11 @@
 <?php
 
  class Login_Model extends CI_Model{
-		
+	
+	public function __construct(){
 
+		parent::__construct();
+	}
  
 	public function add_new_user()
 	{
@@ -20,34 +23,6 @@
 		);
 		
 		$this->db->insert('users' , $data);
-	}
-	/** End of Function add_new_user. */
-	public function display(){
-		$query = $this->db->get('users');
-		
-		return $query->result_array();
-	}
-	public function deletion($id)
-	{
-		$this->db->where('id' ,$id);
-		return $this->db->delete('users');
-	}
-	public function select_up($id)
-	{
-		
-		return $this->db->query("SELECT * from users where id = $id")->result();
-		
-	}
-	public function update_user(){
-		$this->db->query("UPDATE  users 
-		SET firstname = '$_POST[firstname]' ,
-		lastname = '$_POST[lastname]',
-		username ='$_POST[username]' ,
-		gender = '$_POST[gender]' ,
-		user_bio = '$_POST[user_bio]',
-		user_interest = '$_POST[user_interest]' ,
-		user_job = '$_POST[user_job]' where id = $_POST[id] 
-		");
 	}
 	/**
 		Function Display_All_Member
