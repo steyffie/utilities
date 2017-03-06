@@ -7,61 +7,6 @@
     </section>
     <section class="content">
       <div class="row">
-        <div class="col-lg-3 col-xs-6">
-          <div class="small-box bg-red">
-            <div class="inner">
-              <h3>150</h3>
-              <p>Students Registered</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-group"></i>
-            </div>
-            <a href="<?php echo site_url('subadmin/Dashboard'); ?>" class="small-box-footer">
-              More info <i class="fa fa-arrow-circle-right"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-xs-6">
-          <div class="small-box bg-green">
-            <div class="inner">
-              <h3>53</h3>
-              <p>School Events</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-calendar"></i>
-            </div>
-            <a href="<?php echo site_url('subadmin/Event'); ?>" class="small-box-footer">
-              More info <i class="fa fa-arrow-circle-right"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-xs-6">
-          <div class="small-box bg-yellow">
-            <div class="inner" style="height: 130px;">
-              <h3>44</h3>
-              <p>SMS Sent</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-envelope-o"></i>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-xs-6">
-          <div class="small-box bg-aqua">
-            <div class="inner">
-              <h3>SITE</h3>
-              <p>Student Form</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-user-plus"></i>
-            </div>
-            <a href="<?php echo site_url('student/StudentBoard'); ?>" class="small-box-footer">
-              Open Student Board <i class="fa fa-arrow-circle-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div class="box box-primary">
               <div class="box-header with-border">

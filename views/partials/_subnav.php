@@ -11,7 +11,7 @@
         </div>
         <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="<?php echo site_url('subadmin/Dashboard'); ?>">Dashboard</a></li>
+            <li><a href="<?php echo site_url('subadmin/Dashboard'); ?>">Students Registered</a></li>
             <li><a href="<?php echo site_url('subadmin/Event'); ?>">Events</a></li>
           </ul>
         </div>
