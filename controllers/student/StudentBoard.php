@@ -6,37 +6,16 @@
 			parent::__construct();
 		}
 
-		public function index(){
-
-			$data = [
-				'title' => 'Student Board',
-				'content' => 'student/home',
-				'class' => 'hold-transition register-page'
-			];
-
-			$this->load->view('layout/login_layout', $data);
-		}
-
-		public function form_student(){
+		public function student_form(){
 
 			$data = [
 				'title' => 'Student Form',
-				'content' => 'student/form-student',
+				'content' => 'student/student-form',
 				'class' => 'hold-transition register-page'
 			];
 
 			$this->load->view('layout/login_layout', $data);
 		}
 
-		public function search_student(){
-
-			$data = [
-				'title' => 'Student Form',
-				'content' => 'student/search-student',
-				'class' => 'hold-transition register-page'
-			];
-
-			$this->load->view('layout/login_layout', $data);
-		}
 	}
  ?>
