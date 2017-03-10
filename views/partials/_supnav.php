@@ -20,7 +20,12 @@
                 <li><a href="<?php echo site_url('superadmin/logs/sms_logs'); ?>">SMS Logs</a></li>
               </ul>
             </li>
-            <li><a href="<?php echo site_url('recovery/Recovery'); ?>">Password Recovery</a></li>
+            <li>
+              <a href="<?php echo site_url('recovery/Recovery'); ?>">
+                Password Recovery
+                <span class="label label-danger">10</span>
+              </a>
+            </li>
           </ul>
         </div>
         <div class="navbar-custom-menu">

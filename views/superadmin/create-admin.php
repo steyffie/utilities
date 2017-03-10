@@ -10,7 +10,7 @@
               <div class="alert alert-danger alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 <h4><i class="icon fa fa-ban"></i> Alert!</h4>
-                Not created, lacks some fields
+                <?php echo validation_errors(); ?>
               </div>
             </div>
           </section>
@@ -19,6 +19,7 @@
               <h3>Create Admin Account</h3>
             </div>
             <div class="box-body">
+            <?php echo form_open('superadmin/Dashboard/create_admin'); ?>
               <form role="form">
                 <div class="box-body">
                   <div class="form-group">
@@ -26,7 +27,7 @@
                       <div class="input-group-addon">
                         <i class="fa fa-user"></i>
                       </div>
-                      <input type="text" class="form-control" placeholder="First Name">
+                      <input type="text" class="form-control" name="adminfname" placeholder="First Name" required>
                     </div>
                   </div>
                   <div class="form-group">
@@ -34,7 +35,7 @@
                       <div class="input-group-addon">
                         <i class="fa fa-user"></i>
                       </div>
-                      <input type="text" class="form-control" placeholder="Last Name">
+                      <input type="text" class="form-control" name="adminlname" placeholder="Last Name" required>
                     </div>
                   </div>
                   <div class="form-group">
@@ -42,7 +43,7 @@
                       <div class="input-group-addon">
                         <i class="fa fa-user"></i>
                       </div>
-                      <input type="text" class="form-control" placeholder="Username" disabled>
+                      <input type="text" id="username" class="form-control" name="username" placeholder="Username" required>
                     </div>
                   </div>
                   <div class="form-group">
@@ -50,7 +51,7 @@
                       <div class="input-group-addon">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <input type="text" class="form-control" placeholder="password" disabled>
+                      <input type="password" id="password" class="form-control" name="password" placeholder="password" required>
                     </div>
                   </div>
                   <div class="form-group">
@@ -58,7 +59,7 @@
                       <div class="input-group-addon">
                         <i class="fa fa-calendar"></i>
                       </div>
-                      <input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'">
+                      <input type="text" class="form-control" name="birthdate" data-inputmask="'alias': 'mm/dd/yyyy'" required>
                     </div>
                   </div>
                   <div class="form-group">
@@ -66,13 +67,13 @@
                       <div class="input-group-addon">
                         <i class="fa fa-envelope"></i>
                       </div>
-                      <input type="text" class="form-control" placeholder="Email Address">
+                      <input type="text" class="form-control" name="adminemail" placeholder="Email Address" required>
                     </div>
                   </div>
-                  <div class="form-group ">
-                    <select class="form-control">
-                      <option>Male</option>
-                      <option>Female</option>
+                  <div class="form-group">
+                    <select name="gender" class="form-control" required>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -80,7 +81,7 @@
                       <div class="input-group-addon">
                         <i class="fa fa-map"></i>
                       </div>
-                      <input type="text" class="form-control" placeholder="Address">
+                      <input type="text" name="adminaddress" class="form-control" placeholder="Address" required>
                     </div>
                   </div>
                 </div>
