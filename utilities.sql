@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 06, 2017 at 06:30 AM
+-- Generation Time: Mar 10, 2017 at 02:36 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `adminlogs` (
   `no` int(10) NOT NULL,
-  `username` varchar(30) NOT NULL,
+  `username` varchar(30) CHARACTER SET utf8 NOT NULL,
   `loggedin` datetime NOT NULL,
-  `action` varchar(100) DEFAULT NULL,
+  `action` varchar(100) CHARACTER SET utf8 NOT NULL,
   `loggedout` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -76,11 +76,11 @@ CREATE TABLE `tbladmin` (
   `adminlname` varchar(40) NOT NULL,
   `username` varchar(40) NOT NULL,
   `password` varchar(100) NOT NULL,
-  `birthdate` date NOT NULL,
+  `birthdate` varchar(20) CHARACTER SET utf16 NOT NULL,
   `adminemail` varchar(50) NOT NULL,
   `adminaddress` varchar(50) NOT NULL,
   `gender` enum('Male','Female') DEFAULT NULL,
-  `level` enum('1','2') DEFAULT NULL
+  `level` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -93,7 +93,7 @@ CREATE TABLE `tblevent` (
   `no` int(11) NOT NULL,
   `eventtitle` varchar(40) NOT NULL,
   `eventdesc` varchar(100) NOT NULL,
-  `eventdate` date NOT NULL,
+  `eventdate` varchar(20) NOT NULL,
   `eventtime` datetime NOT NULL,
   `send` enum('SITE','1st Year','2nd Year','3rd Year','4th Year','Do not send') DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -122,7 +122,7 @@ CREATE TABLE `tblstudent` (
   `year` int(20) NOT NULL,
   `section` varchar(20) NOT NULL,
   `gender` enum('Female','Male') NOT NULL,
-  `birthdate` date NOT NULL,
+  `birthdate` varchar(20) NOT NULL,
   `studaddress` varchar(100) NOT NULL,
   `studemail` varchar(50) NOT NULL,
   `studcontactno` bigint(11) NOT NULL,
@@ -189,7 +189,7 @@ ALTER TABLE `tblstudent`
 -- AUTO_INCREMENT for table `adminlogs`
 --
 ALTER TABLE `adminlogs`
-  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `eventlogs`
 --
@@ -199,7 +199,7 @@ ALTER TABLE `eventlogs`
 -- AUTO_INCREMENT for table `smslogs`
 --
 ALTER TABLE `smslogs`
-  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tbladmin`
 --
