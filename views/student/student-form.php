@@ -5,13 +5,14 @@
         <div class="alert alert-danger alert-dismissible">
           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
           <h4><i class="icon fa fa-ban"></i> Alert!</h4>
-          Student Information not added.. etc etc
+          <?php echo validation_errors(); ?>
         </div>
       </div>
     <div class="register-logo">
       <b>SITE</b>&nbsp;Student Form
     </div>
     <div class="register-box-body">
+      <?php echo form_open('student/StudentBoard/student_form')?>
       <p class="login-box-msg">Register your Student Info</p>
       <form action="../../index.html" method="post">
         <div class="form-group">
@@ -19,7 +20,7 @@
             <div class="input-group-addon">
               <i class="fa fa-building-o"></i>
             </div>
-            <input type="text" class="form-control" placeholder="Student ID No.">
+            <input type="text" class="form-control" placeholder="Student ID No." required>
           </div>
         </div>
         <div class="form-group">
@@ -27,19 +28,19 @@
             <div class="input-group-addon">
               <i class="fa fa-user"></i>
             </div>
-            <input type="text" class="form-control" placeholder="Full Name">
+            <input type="text" class="form-control" placeholder="Full Name" required>
           </div>
         </div>
         <label>BSIT/Year/Section</label>
         <div class="row">
           <div class="col-lg-6">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="year">
+              <input type="text" class="form-control" placeholder="year" required>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="section">
+              <input type="text" class="form-control" placeholder="section" required>
             </div>
           </div>
         </div>
@@ -57,7 +58,7 @@
             <div class="input-group-addon">
               <i class="fa fa-calendar"></i>
             </div>
-            <input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" placeholder="birthdate" data-mask>
+            <input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" placeholder="birthdate" data-mask required>
           </div>
         </div>
         <div class="form-group">
@@ -65,7 +66,7 @@
             <div class="input-group-addon">
               <i class="fa fa-map"></i>
             </div>
-            <input type="text" class="form-control" placeholder="Address">
+            <input type="text" class="form-control" placeholder="Address" required>
           </div>
         </div>
         <div class="form-group">
@@ -73,7 +74,7 @@
             <div class="input-group-addon">
               <i class="fa fa-envelope"></i>
             </div>
-            <input type="text" class="form-control" placeholder="Student Email Address">
+            <input type="text" class="form-control" placeholder="Student Email Address" required>
           </div>
         </div>
         <div class="form-group">
@@ -81,7 +82,7 @@
             <div class="input-group-addon">
               <i class="fa fa-phone"></i>
             </div>
-            <input type="text" class="form-control" placeholder="Student Contact Number">
+            <input type="text" class="form-control" placeholder="Student Contact Number" required>
           </div>
         </div>
         <div class="form-group">
@@ -98,7 +99,7 @@
             <div class="input-group-addon">
               <i class="fa fa-user"></i>
             </div>
-            <input type="text" class="form-control" placeholder="Person's Name">
+            <input type="text" class="form-control" placeholder="Person's Name" required>
           </div>
         </div>
         <div class="form-group">
@@ -106,7 +107,7 @@
             <div class="input-group-addon">
               <i class="fa fa-users"></i>
             </div>
-            <input type="text" class="form-control" placeholder="Relation to Student">
+            <input type="text" class="form-control" placeholder="Relation to Student" required>
           </div>
         </div>
         <div class="form-group">
@@ -114,7 +115,7 @@
             <div class="input-group-addon">
               <i class="fa fa-map"></i>
             </div>
-            <input type="text" class="form-control" placeholder="Person'sAddress">
+            <input type="text" class="form-control" placeholder="Person'sAddress" required>
           </div>
         </div>
         <div class="form-group">
@@ -122,7 +123,7 @@
             <div class="input-group-addon">
               <i class="fa fa-phone"></i>
             </div>
-            <input type="text" class="form-control" placeholder="Person's Contact Number">
+            <input type="text" class="form-control" placeholder="Person's Contact Number" required>
           </div>
         </div>
         <a href="<?php echo site_url('student/students'); ?>" class="btn btn-default btn-flat">Back</a>

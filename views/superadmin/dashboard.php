@@ -58,7 +58,7 @@
                       <td>marie.doe@gmail.com</td>
                       <td>activated</td>
                       <td style="width: 150px;">
-                        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#viewModal"><span class="fa fa-eye"></span></button>
+                        <button type="submit" class="btn btn-default" data-toggle="modal" data-target="#viewModal"><span class="fa fa-eye"></span></button>
                         <button type="submit" class="btn btn-danger"><span class="fa fa-lock"></span></button>
                       </td>
                     </tr>
@@ -87,7 +87,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Studen Name Here</h4>
+        <h4 class="modal-title" id="myModalLabel">Student Name Here</h4>
       </div>
       <div class="modal-body">
         <dl class="dl-horizontal">

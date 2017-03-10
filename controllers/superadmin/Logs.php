@@ -13,8 +13,7 @@
 			 'title' => 'SITE Logs',
 			 'content' => 'superadmin/logs',
 			 'class' => 'hold-transition skin-blue layout-top-nav',
-			 'nav' => 'partials/_supnav',
-			 'classFooter' => 'partials/clsfooter'
+			 'nav' => 'partials/_supnav'
 			];
 
 			$this->load->view('layout/master_layout', $data);
@@ -26,8 +25,7 @@
 			 'title' => 'Admin Logs',
 			 'content' => 'superadmin/admin-logs',
 			 'class' => 'hold-transition skin-blue layout-top-nav',
-			 'nav' => 'partials/_supnav',
-			 'classFooter' => 'partials/clsfooter'
+			 'nav' => 'partials/_supnav'
 			];
 
 			$this->load->view('layout/master_layout', $data);
@@ -39,8 +37,7 @@
 			 'title' => 'SMS Logs',
 			 'content' => 'superadmin/sms-logs',
 			 'class' => 'hold-transition skin-blue layout-top-nav',
-			 'nav' => 'partials/_supnav',
-			 'classFooter' => 'partials/clsfooter'
+			 'nav' => 'partials/_supnav'
 			];
 
 			$this->load->view('layout/master_layout', $data);

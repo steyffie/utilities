@@ -18,24 +18,26 @@ class Login extends CI_Controller
 			$username = $this->session->userdata('username');
 			$data['level'] = $this->session->userdata('level');
 			  if($data['level']== "2"){
-			$data = [
-			 		'title' => 'SITE Dashboard',
-			 		'content' => 'superadmin/dashboard',
-			 		'class' => 'hold-transition skin-blue layout-top-nav',
-			 		'nav' => 'partials/_supnav',
-			 		'classFooter' => 'partials/clsfooter'
-				];
 
-				$this->load->view('layout/master_layout', $data);
-			}
-			else if ($data['level']== "1"){
-
-				$data = [
+			  	$data = [
 	 				'title' => 'SITE Dashboard',
 		 			'content' => 'subadmin/dashboard',
 		 			'class' => 'hold-transition skin-blue layout-top-nav',
 		 			'nav' => 'partials/_subnav',
 		 			'classFooter' => 'partials/clsfooter'
+				];
+
+				$this->load->view('layout/master_layout', $data);
+
+			}
+			else if ($data['level']== "1"){
+
+				$data = [
+			 		'title' => 'SITE Dashboard',
+			 		'content' => 'superadmin/dashboard',
+			 		'class' => 'hold-transition skin-blue layout-top-nav',
+			 		'nav' => 'partials/_supnav',
+			 		'classFooter' => 'partials/clsfooter'
 				];
 
 				$this->load->view('layout/master_layout', $data);
@@ -81,13 +83,13 @@ class Login extends CI_Controller
 			$id = $this->Login_Model->getid($username, $password);
 			$level = $this->Login_Model->getlevel($username, $password);
 			$firstname = $this->Login_Model->getfirstname($username, $password);
-			$jhun = $this->Login_Model->getuser($username, $password );
-			if($jhun == 1){	
+			$util = $this->Login_Model->getuser($username, $password );
+			if($util == 1){	
 				$this->session->set_userdata('isLogin',TRUE);
 				$this->session->set_userdata('username', $username);
 				  $this->session->set_userdata('level',$level);
 				$this->session->set_userdata('id', $id[0]['id']);
-				$this->session->set_userdata('firstname', $firstname);
+				$this->session->set_userdata('adminfname', $firstname);
 				
 				redirect('Login');
 				

@@ -7,11 +7,21 @@
         <div class="col-xs-hidden col-sm-hidden col-md-3 col-lg-3">
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <section class="content-header">
+            <div class="box-body">
+              <div class="alert alert-danger alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <h4><i class="icon fa fa-ban"></i> Alert!</h4>
+                <?php echo validation_errors(); ?>
+              </div>
+            </div>
+          </section>
           <div class="box box-primary">
             <div class="box-header with-border">
               <h3>Create CIIT Event</h3>
             </div>
             <div class="box-body">
+              <?php echo form_open('subadmin/Event/create_event')?>
               <form role="form">
                 <div class="box-body">
                   <div class="form-group">
@@ -44,6 +54,7 @@
                       <option>SITE</option>
                       <option>4th Year</option>
                       <option>3rd Year</option>
+                      <option>2nd Year</option>
                       <option>1st Year</option>
                       <option>do not send</option>
                     </select>

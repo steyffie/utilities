@@ -11,28 +11,25 @@
 	{
 		
 		$data = array(
-			'firstname' => $this->input->post('firstname'),
-			'lastname'=> $this->input->post('lastname'),
+			'adminfname' => $this->input->post('adminfname'),
+			'adminlname'=> $this->input->post('adminlname'),
 			'username' => $this->input->post('username'),
-			 'level' => '1',
+			 'level' => '2',
 			'gender'=> $this->input->post('gender'),
-		
-			'email'=> $this->input->post('email'),
+			'adminaddress' => $this->input->post('adminaddress'),
+			'birthdate' => $this->input->post('birthdate'),
+			'adminemail'=> $this->input->post('adminemail'),
 			'password' => md5($this->input->post('password'))
 		
 		);
 		
-		$this->db->insert('users' , $data);
+		$this->db->insert('tbladmin' , $data);
 	}
-	/**
-		Function Display_All_Member
-		--------------------------------
-		It will display all data that you want in a table.
-	*/	
+
 		public function login_registered($username , $password)
 	{
 		$this->db->select('id , username , password');
-		$this->db->from('users');		
+		$this->db->from('tbladmin');		
 		$this->db->where('username' , $username);
 		$this->db->where('password' , md5($password));
 		$this->db->limit(1);
@@ -51,7 +48,7 @@
 	}
 	 public function getuser($username, $password)  {
         $this->db->select('*');
-        $this->db->from('users');
+        $this->db->from('tbladmin');
         $this->db->where('username', $username);
         $this->db->where('password', $password);
 	
@@ -64,7 +61,7 @@
         $this->db->select('id');
         $this->db->where('username', $username);
         $this->db->where('password', $password);
-        $query = $this->db->get('users');
+        $query = $this->db->get('tbladmin');
         $result =  $query->result_array();
         return $result;
     }
@@ -72,7 +69,7 @@
         $this->db->select('level');
         $this->db->where('username', $username);
         $this->db->where('password', $password);
-        $query = $this->db->get('users');
+        $query = $this->db->get('tbladmin');
         $data = array_shift($query->result_array());
          if($data['level']==1){
             return 1;
@@ -83,10 +80,10 @@
     }
     
      public function getfirstname($username, $password){
-        $this->db->select('firstname');
+        $this->db->select('adminfname');
         $this->db->where('username', $username);
         $this->db->where('password', $password);
-        $query = $this->db->get('users');
+        $query = $this->db->get('tbladmin');
         $result =  $query->result_array();
         return $result;
     }
