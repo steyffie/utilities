@@ -87,5 +87,12 @@
         $result =  $query->result_array();
         return $result;
     }
+	
+	
+	public function view_users(){
+		$query = $this->db->get('tbladmin');
+		
+		return $query->result_array();
+	}
      
  }

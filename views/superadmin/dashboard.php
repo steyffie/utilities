@@ -40,28 +40,22 @@
                     </tr>
                   </thead>
                   <tbody>
+					<?php foreach($data as $users){ ?>
                     <tr>
-                      <td>1</td>
-                      <td>John.doe</td>
-                      <td>John Doe</td>
-                      <td>john.doe@gmail.com</td>
-                      <td>Deactivated</td>
+                      <td><?php echo $users['adminfname']?></td>
+					  <td><?php echo $users['adminlname']?></td>
+                      <td><?php echo $users['username']?></td>
+                      <td><?php echo $users['gender']?></td>
+					  <td><?php echo $users['adminaddress']?></td>
+					  <td><?php echo $users['birthdate']?></td>
+					  <td><?php echo $users['adminemail']?></td>
+					  <td><?php echo $users['password']?></td>
                       <td style="width: 150px;">
                         <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#viewModal"><span class="fa fa-eye"></span></button>
                         <button type="submit" class="btn btn-success"><span class="fa fa-unlock"></span></button>
                       </td>
                     </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>marie.doe</td>
-                      <td>Marie Doe</td>
-                      <td>marie.doe@gmail.com</td>
-                      <td>activated</td>
-                      <td style="width: 150px;">
-                        <button type="submit" class="btn btn-default" data-toggle="modal" data-target="#viewModal"><span class="fa fa-eye"></span></button>
-                        <button type="submit" class="btn btn-danger"><span class="fa fa-lock"></span></button>
-                      </td>
-                    </tr>
+					<?php } ?>	
                   </tbody>
                 </table>
               </div>
