@@ -88,6 +88,17 @@
         return $result;
     }
 
+	
+	
+	public function view_users(){
+		$query = $this->db->get('tbladmin');
+		
+		return $query->result_array();
+	}
+     
+ }
+
+
     // Function To Fetch All Students Record
 	public function show_students(){
 		$query = $this->db->get('tbladmin');
@@ -111,3 +122,4 @@
 } 
 }
 ?>
+

@@ -20,6 +20,8 @@
 			];
 
 			$this->load->view('layout/master_layout', $data);
+			$this->Login_Model->view_users();
+			
 		}
 
 		public function create_admin(){
