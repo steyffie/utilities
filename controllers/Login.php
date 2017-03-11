@@ -11,7 +11,7 @@ class Login extends CI_Controller
 	public function index()
 	{
 		$session = $this->session->userdata('isLogin');
-		if($session == False){
+		if($session == False){	
 			redirect('login/login_form');
 		}
 		else{
