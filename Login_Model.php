@@ -87,12 +87,27 @@
         $result =  $query->result_array();
         return $result;
     }
-	
-	
-	public function view_users(){
+
+    // Function To Fetch All Students Record
+	public function show_students(){
 		$query = $this->db->get('tbladmin');
-		
-		return $query->result_array();
+		$query_result = $query->result();
+		return $query_result;
 	}
-     
+
+	  // Function To Fetch Selected Student Record
+	public function show_student_id($data){
+		$this->db->select('*');
+		$this->db->from('tbladmin');
+		$this->db->where('id', $data);
+		$query = $this->db->get();
+		$result = $query->result();
+		return $result;
+}
+	// Update Query For Selected Student
+	public function update_student_id1($id,$data){
+		$this->db->where('sid', $id);
+		$this->db->update('tbladmin', $data);
+}
+  
  }
