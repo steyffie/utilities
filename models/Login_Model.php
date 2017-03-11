@@ -25,7 +25,7 @@
 		
 		$this->db->insert('tbladmin' , $data);
 	}
-
+	
 		public function login_registered($username , $password)
 	{
 		$this->db->select('id , username , password');
