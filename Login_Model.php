@@ -108,6 +108,6 @@
 	public function update_student_id1($id,$data){
 		$this->db->where('sid', $id);
 		$this->db->update('tbladmin', $data);
-} 
 }
-?>
+  
+ }
