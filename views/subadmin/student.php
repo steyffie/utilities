@@ -2,7 +2,7 @@
   <div class="container">
     <section class="content-header">
       <h1>
-        Searches about John Doe...
+        Students registered
       </h1>
     </section>
     <section class="content">
@@ -12,14 +12,13 @@
               <div class="box-header with-border">
                 <h3 class="box-title">List of Student</h3>
                 <div class="box-tools">
-                <div class="input-group input-group-sm" style="width: 250px;">
-                  <input type="text" name="table_search" class="form-control pull-right" placeholder="Search Student">
-
-                  <div class="input-group-btn">
-                    <a href="<?php echo site_url('subadmin/Student/search_student');?>" class="btn btn-default"><i class="fa fa-search"></i></a>
+                  <div class="input-group input-group-sm" style="width: 250px;">
+                    <input type="text" name="table_search" class="form-control pull-right" placeholder="Search Student">
+                    <div class="input-group-btn">
+                      <a href="<?php echo site_url('subadmin/Student/search_student');?>" class="btn btn-default"><i class="fa fa-search"></i></a>
+                    </div>
                   </div>
                 </div>
-              </div>
               </div>
               <div class="box-body">
                 <table class="table table-bordered">
@@ -29,7 +28,6 @@
                       <th>Full Name</th>
                       <th>Course/Year/Section</th>
                       <th>Contact Number</th>
-                      <th>Status</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -39,7 +37,6 @@
                       <td>John Doe</td>
                       <td>BSIT 3-R2</td>
                       <td>09165209766</td>
-                      <td><span class="label label-success">Enrolled</span></td>
                       <td>
                         <button type="submit" class="btn btn-primary btn-xs btn-block" data-toggle="modal" data-target="#viewModal"><span class="fa fa-eye"></span></button>
                       </td>
@@ -49,7 +46,6 @@
                       <td>Tiffany S. McAvoy</td>
                       <td>BSIT 3-R2</td>
                       <td>+44(636)-3444501</td>
-                      <td><span class="label label-danger">Not Enrolled</span></td>
                       <td>
                         <button type="submit" class="btn btn-primary btn-xs btn-block" data-toggle="modal" data-target="#viewModal"><span class="fa fa-eye"></span></button>
                       </td>
@@ -98,17 +94,20 @@
             <dd>sample</dd>
           <dt>Student Contact Number:</dt>
             <dd>sample</dd>
-          <dt>Mother's Name:</dt>
-            <dd>sample</dd>
-          <dt>Mother's Contact Number:</dt>
-            <dd>sample</dd>
-          <dt>Father's Name</dt>
-            <dd>sample</dd>
-          <dt>Father's Contact Number:</dt>
-            <dd>sample</dd>
           <dt>School Status:</dt>
             <dd>sample</dd>
           <dt>Date Added:</dt>
+            <dd>sample</dd>
+        </dl>
+        <label>IN CASE OF EMERGENCY CONTACT:</label>
+        <dl class="dl-horizontal">
+          <dt>Person's Name:</dt>
+            <dd>sample</dd>
+          <dt>Relation to Student:</dt>
+            <dd>sample</dd>
+          <dt>Contact Number:</dt>
+            <dd>sample</dd>
+          <dt>\ddress:</dt>
             <dd>sample</dd>
         </dl>
       </div>
