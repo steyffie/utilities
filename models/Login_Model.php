@@ -96,7 +96,6 @@
 		return $query->result_array();
 	}
      
- }
 
 
     // Function To Fetch All Students Record
