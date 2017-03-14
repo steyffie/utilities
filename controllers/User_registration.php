@@ -14,7 +14,7 @@
 		$this->form_validation->set_rules('lastname','Lastname','trim|required');
 		$this->form_validation->set_rules('username','Username','trim|required|min_length[5]|max_length[20]');
 		$this->form_validation->set_rules('password','Password','trim|required|min_length[8]|max_length[15]|matches[passwordconf]');
-   		$this->form_validation->set_rules('email','email','trim|required');
+    $this->form_validation->set_rules('email','email','trim|required');
 		if($this->form_validation->run() == FALSE)
 		{
 			$this->load->view('superadmin/Dashboard');

@@ -19,20 +19,19 @@
               </div>
             </div>
         </section>
-          <div id="detail" class="box box-primary">
-            <?php foreach ($single_student as $student): ?>
+          <div class="box box-primary">
             <div class="box-header with-border">
               <h3>Edit User Profile</h3>
             </div>
             <div class="box-body">
-              <form role="form" method="post">
+              <form role="form">
                 <div class="box-body">
                   <div class="form-group">
                     <div class="input-group">
                       <div class="input-group-addon">
                         <i class="fa fa-user"></i>
                       </div>
-                      <input type="text" class="form-control" name="adminfname" value="<?php echo $student->adminfname; ?>">
+                      <input type="text" class="form-control" placeholder="John">
                     </div>
                   </div>
                   <div class="form-group">
@@ -40,7 +39,7 @@
                       <div class="input-group-addon">
                         <i class="fa fa-user"></i>
                       </div>
-                      <input type="text" class="form-control" name="adminlname" value="<?php echo $student->adminlname; ?>">
+                      <input type="text" class="form-control" placeholder="Doe">
                     </div>
                   </div>
                   <div class="form-group">
@@ -48,7 +47,7 @@
                       <div class="input-group-addon">
                         <i class="fa fa-user"></i>
                       </div>
-                      <input type="text" class="form-control" name="username" value="<?php echo $student->username; ?>">
+                      <input type="text" class="form-control" placeholder="John.Doe">
                     </div>
                   </div>
                   <div class="form-group">
@@ -56,7 +55,7 @@
                       <div class="input-group-addon">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <input type="password" class="form-control" name="password" value="<?php echo $student->password; ?>">
+                      <input type="text" class="form-control" placeholder="new password">
                     </div>
                   </div>
                   <div class="form-group">
@@ -64,7 +63,7 @@
                       <div class="input-group-addon">
                         <i class="fa fa-calendar"></i>
                       </div>
-                      <input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" name="birthdate"value="<?php echo $student->birthdate; ?>">
+                      <input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" placeholder="11/21/2017">
                     </div>
                   </div>
                   <div class="form-group">
@@ -72,11 +71,11 @@
                       <div class="input-group-addon">
                         <i class="fa fa-envelope"></i>
                       </div>
-                      <input type="text" class="form-control" name="adminemail" value="<?php echo $student->birthdate; ?>">
+                      <input type="text" class="form-control" placeholder="john.doe@gmail.com">
                     </div>
                   </div>
                   <div class="form-group ">
-                    <select class="form-control" name="gender" value="<?php echo $student->gender; ?>">
+                    <select class="form-control">
                       <option>Male</option>
                       <option>Female</option>
                     </select>
@@ -86,16 +85,15 @@
                       <div class="input-group-addon">
                         <i class="fa fa-map"></i>
                       </div>
-                      <input type="text" class="form-control" name="adminaddress" value="<?php echo $student->adminaddress; ?>">
+                      <input type="text" class="form-control" placeholder="misamis oriental">
                     </div>
                   </div>
                 </div>
                 <div class="box-footer">
                   <button type="submit" class="btn btn-default">Cancel</button>
-                  <button type="submit" id="submit" class="btn btn-primary pull-right" value="Update" name="dsubmit">Update</button>
+                  <button type="submit" class="btn btn-primary pull-right">Update</button>
                 </div>
               </form>
-            <?php endforeach; ?>
             </div>
           </div>
         </div>
@@ -103,4 +101,7 @@
     </section>
   </div>
 </div>
+
+
+
 
