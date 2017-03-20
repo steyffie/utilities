@@ -7,6 +7,25 @@
         <?php echo validation_errors(); ?>
       </div>
     </div>
+    <div class="register-box-body">
+      <?php echo form_open('student/StudentBoard/student_form')?>
+      <p class="login-box-msg">Register your Student Info</p>
+      <form action="../../index.html" method="post">
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-building-o"></i>
+            </div>
+            <input type="text" class="form-control" placeholder="Student ID No." required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-user"></i>
+            </div>
+            <input type="text" class="form-control" placeholder="Full Name" required>
+=======
   <div class="register-logo">
     <b>SITE</b>&nbsp;Student Form
   </div>
@@ -26,9 +45,22 @@
         <div class="input-group">
           <div class="input-group-addon">
             <i class="fa fa-user"></i>
+
           </div>
           <input type="text" class="form-control" name="studfname" placeholder="First Name" required>
         </div>
+
+        <label>BSIT/Year/Section</label>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="year" required>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="section" required>
+            </div>
       </div>
       <div class="form-group">
         <div class="input-group">
@@ -37,6 +69,21 @@
           </div>
          <input type="text" class="form-control" name="studlname" placeholder="Last Name" required>
         </div>
+        <br>
+        <div class="form-group">
+          <select class="form-control">
+            <optgroup label="GENDER">
+              <option>Female</option>
+              <option>Male</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" placeholder="birthdate" data-mask required>
       </div>
       <label>BSIT/Year/Section</label>
       <div class="row">
@@ -47,6 +94,18 @@
         </div>
         <div class="col-lg-6">
           <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-map"></i>
+            </div>
+            <input type="text" class="form-control" placeholder="Address" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-envelope"></i>
+            </div>
+            <input type="text" class="form-control" placeholder="Student Email Address" required>
             <input type="text" class="form-control" name="section" placeholder="Section" required>
           </div>
         </div>
@@ -67,6 +126,11 @@
           </div>
           <input type="text" class="form-control" name="birthdate" data-inputmask="'alias': 'yyyy/mm/dd'" placeholder="birthdate" data-mask required>
         </div>
+        <div class="form-group">          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-phone"></i>
+            </div>
+            <input type="text" class="form-control" placeholder="Student Contact Number" required>
       </div>
       <div class="form-group">
         <div class="input-group">
@@ -75,6 +139,21 @@
           </div>
           <input type="text" class="form-control" name="studaddress" placeholder="Address" required>
         </div>
+        <div class="form-group">
+          <select class="form-control">
+            <optgroup label="School Status">
+              <option>Enrolled</option>
+              <option>Not Enrolled</option>
+            </optgroup>
+          </select>
+        </div>
+        <label>IN CASE OF EMERGENCY CONTACT</label>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-user"></i>
+            </div>
+            <input type="text" class="form-control" placeholder="Person's Name" required>
       </div>
       <div class="form-group">
         <div class="input-group">
@@ -91,6 +170,12 @@
           </div>
           <input type="text" class="form-control" name="studcontactno" placeholder="Student Contact Number" required>
         </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-users"></i>
+            </div>
+            <input type="text" class="form-control" placeholder="Relation to Student" required>
       </div>
       <label>IN CASE OF EMERGENCY CONTACT</label>
       <div class="form-group">
@@ -100,6 +185,12 @@
           </div>
           <input type="text" name="personfname" class="form-control" placeholder="First Name" required>
         </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-map"></i>
+            </div>
+            <input type="text" class="form-control" placeholder="Person'sAddress" required>
       </div>
       <div class="form-group">
         <div class="input-group">
@@ -108,14 +199,34 @@
           </div>
           <input type="text" name="personlname" class="form-control" placeholder="Last Name" required>
         </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-phone"></i>
+            </div>
+            <input type="text" class="form-control" placeholder="Person's Contact Number" required
       </div>
       <div class="form-group">
         <div class="input-group">
           <div class="input-group-addon">
-            <i class="fa fa-users"></i>
+            <i class="fa fa-users"></i
           </div>
           <input type="text" name="studrelation" class="form-control" placeholder="Relation to Student" required>
         </div>
+
+        <a href="<?php echo site_url('student/students'); ?>" class="btn btn-default btn-flat">Back</a>
+        <button type="submit" class="btn btn-primary btn-flat pull-right">Register</button>
+      </form>
+    </div>
+  </div>
+  <!--notify modal-->
+<div class="modal fade" id="notifyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Admin Pass</h4>
+
       </div>
       <div class="form-group">
         <div class="input-group">
@@ -124,6 +235,7 @@
           </div>
           <input type="text" name="personaddress" class="form-control" placeholder="Person's Address" required>
         </div>
+
       </div>
       <div class="form-group">
         <div class="input-group">

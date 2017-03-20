@@ -2,7 +2,7 @@
   <div class="container">
     <section class="content-header">
       <h1>
-        Dashboard
+        Admin
       </h1>
       <div class="box-body">
         <div class="alert alert-success alert-dismissible">
@@ -40,16 +40,16 @@
                     </tr>
                   </thead>
                   <tbody>
-					<?php foreach($data as $users){ ?>
+					<?php foreach($users as $user){ ?>
                     <tr>
-                      <td><?php echo $users['adminfname']?></td>
-					  <td><?php echo $users['adminlname']?></td>
-                      <td><?php echo $users['username']?></td>
-                      <td><?php echo $users['gender']?></td>
-					  <td><?php echo $users['adminaddress']?></td>
-					  <td><?php echo $users['birthdate']?></td>
-					  <td><?php echo $users['adminemail']?></td>
-					  <td><?php echo $users['password']?></td>
+                      <td><?php echo $user['adminfname']?></td>
+					  <td><?php echo $user['adminlname']?></td>
+                      <td><?php echo $user['username']?></td>
+                      <td><?php echo $user['gender']?></td>
+					  <td><?php echo $user['adminaddress']?></td>
+					  <td><?php echo $user['birthdate']?></td>
+					  <td><?php echo $user['adminemail']?></td>
+					  <td><?php echo $user['password']?></td>
                       <td style="width: 150px;">
                         <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#viewModal"><span class="fa fa-eye"></span></button>
                         <button type="submit" class="btn btn-success"><span class="fa fa-unlock"></span></button>
