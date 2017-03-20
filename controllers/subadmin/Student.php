@@ -32,5 +32,18 @@
 			$this->load->view('layout/master_layout', $data);
 		}
 
+		public function edit_student(){
+
+			$data = [
+			 'title' => 'Update Student',
+			 'content' => 'subadmin/update-student',
+			 'class' => 'hold-transition skin-blue layout-top-nav',
+			 'nav' => 'partials/_subnav',
+			 'classFooter' => 'partials/clsfooter'
+			];
+
+			$this->load->view('layout/master_layout', $data);
+		}
+
 	}
  ?>

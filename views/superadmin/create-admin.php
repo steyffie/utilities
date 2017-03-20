@@ -7,6 +7,11 @@
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
           <section class="content-header">
             <div class="box-body">
+              <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <h4><i class="icon fa fa-check"></i> Alert!</h4>
+                Successfully created user.
+              </div>
               <div class="alert alert-danger alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 <h4><i class="icon fa fa-ban"></i> Alert!</h4>
@@ -19,7 +24,7 @@
               <h3>Create Admin Account</h3>
             </div>
             <div class="box-body">
-            <?php echo form_open('superadmin/Dashboard/create_admin'); ?>
+            <?php echo form_open('superadmin/Admin/create_admin'); ?>
               <form role="form" class="form-horizontal">
                 <div class="box-body">
                   <div class="form-group">
