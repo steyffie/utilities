@@ -26,18 +26,18 @@
                 <div class="box-body">
                   <div class="form-group">
                     <label>Event title</label>
-                    <input type="text" class="form-control"  placeholder="Enter Event Title">
+                    <input type="text" class="form-control" name="eventtitle" placeholder="Enter Event Title" value = "<?php echo set_value('eventtitle');?>">
                   </div>
                   <div class="form-group">
                     <label>Event Description</label>
-                    <textarea class="form-control" placeholder="Enter Description"></textarea>
+                    <textarea class="form-control" name="eventdesc" placeholder="Enter Description" value = "<?php echo set_value('eventdesc');?>"></textarea>
                   </div>
                   <div class="form-group">
                     <div class="input-group">
                       <div class="input-group-addon">
                         <i class="fa fa-calendar"></i>
                       </div>
-                      <input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" placeholder="Event Date" data-mask>
+                      <input type="text" class="form-control" name="eventdate" data-inputmask="'alias': 'yyyy/mm/dd'" placeholder="Event Date" data-mask value = "<?php echo set_value('eventdate');?>">
                     </div>
                   </div>
                   <div class="form-group">
@@ -45,18 +45,18 @@
                       <div class="input-group-addon">
                         <i class="fa fa-clock-o"></i>
                       </div>
-                      <input type="text" class="form-control" placeholder="h : m A">
+                      <input type="text" class="form-control" name="eventtime" placeholder="h : m A" value = "<?php echo set_value('eventtime');?>">
                     </div>
                   </div>
                   <div class="form-group ">
                     <label>Send to:</label>
-                    <select class="form-control">
-                      <option>SITE</option>
-                      <option>4th Year</option>
-                      <option>3rd Year</option>
-                      <option>2nd Year</option>
-                      <option>1st Year</option>
-                      <option>do not send</option>
+                    <select class="form-control" name="send">
+                      <option values="SITE">SITE</option>
+                      <option values="4th Year">4th Year</option>
+                      <option values="3rd Year">3rd Year</option>
+                      <option values="2nd Year">2nd Year</option>
+                      <option values="1st Year">1st Year</option>
+                      <option values="Do not send">do not send</option>
                     </select>
                   </div>
                 </div>

@@ -20,69 +20,44 @@
             </div>
             <div class="box-body">
             <?php echo form_open('superadmin/Dashboard/create_admin'); ?>
-              <form role="form">
+              <form role="form" class="form-horizontal">
                 <div class="box-body">
                   <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <i class="fa fa-user"></i>
-                      </div>
-                      <input type="text" class="form-control" name="adminfname" placeholder="First Name" required>
-                    </div>
+                    <label>First Name</label>
+                    <input type="text" class="form-control" name="adminfname" placeholder="First Name" required>
                   </div>
                   <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <i class="fa fa-user"></i>
-                      </div>
-                      <input type="text" class="form-control" name="adminlname" placeholder="Last Name" required>
-                    </div>
+                    <label>Last Name</label>
+                    <input type="text" class="form-control" name="adminlname" placeholder="Last Name" required>
                   </div>
                   <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <i class="fa fa-user"></i>
-                      </div>
-                      <input type="text" id="username" class="form-control" name="username" placeholder="Username" required>
-                    </div>
+                    <label>Username</label>
+                    <input type="text" id="username" class="form-control" name="username" placeholder="Username" required>
                   </div>
                   <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <i class="fa fa-lock"></i>
-                      </div>
-                      <input type="password" id="password" class="form-control" name="password" placeholder="password" required>
-                    </div>
+                    <label>Password</label> 
+                    <input type="password" id="password" class="form-control" name="password" placeholder="password" required>
                   </div>
                   <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <i class="fa fa-calendar"></i>
-                      </div>
-                      <input type="text" class="form-control" name="birthdate" data-inputmask="'alias': 'mm/dd/yyyy'" required>
-                    </div>
+                    <label>Birthdate</label>
+                    <input type="text" class="form-control" name="birthdate" placeholder="MM/DD/YYYY" required>
                   </div>
                   <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <i class="fa fa-envelope"></i>
-                      </div>
-                      <input type="text" class="form-control" name="adminemail" placeholder="Email Address" required>
-                    </div>
+                    <label>Email Address</label>
+                    <input type="text" class="form-control" name="adminemail" placeholder="Email Address" required>
                   </div>
                   <div class="form-group">
-                    <select name="gender" class="form-control" required>
-                      <option value="Male">Male</option>
-                      <option value="Female">Female</option>
-                    </select>
+                    <label>Gender&nbsp;&nbsp;&nbsp;</label>
+                    <label class="radio-inline">
+                      <input type="radio" name="gender" value="Male"> Male
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="gender" value="Female"> Female
+                    </label>
                   </div>
                   <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <i class="fa fa-map"></i>
-                      </div>
-                      <input type="text" name="adminaddress" class="form-control" placeholder="Address" required>
-                    </div>
+                    <label>Address</label>
+                    <input type="text" name="adminaddress" class="form-control" placeholder="Address" required>
                   </div>
                 </div>
                 <div class="box-footer">

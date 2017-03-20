@@ -1,6 +1,6 @@
 <?php 
 	
-	Class Dashboard extends CI_Controller{
+	Class Admin extends CI_Controller{
 
 		public function __construct(){
 
@@ -12,14 +12,16 @@
 		public function index(){
 
 			$data = [
-			 'title' => 'SITE Dashboard',
-			 'content' => 'superadmin/dashboard',
+			 'title' => 'SITE',
+			 'content' => 'superadmin/admin',
 			 'class' => 'hold-transition skin-blue layout-top-nav',
 			 'nav' => 'partials/_supnav',
 			 'classFooter' => 'partials/clsfooter'
 			];
 
 			$this->load->view('layout/master_layout', $data);
+			$this->Login_Model->view_users();
+			
 		}
 
 		public function create_admin(){
@@ -47,7 +49,7 @@
 		else
 		{
 			$this->Login_Model->add_new_user();
-			redirect('superadmin/Dashboard' , 'refresh');
+			redirect('superadmin/Admin' , 'refresh');
 		}
 		}
 

@@ -7,8 +7,17 @@
 			parent::__construct();
 		}
 
-		public function add_new_event(){
+		public function add_new_event()
+		{
 			
+			$data = array(
+					'eventtitle' => $this->input->post('eventtitle'),
+					'eventdesc'=> $this->input->post('eventdesc'),
+					'eventdate' => $this->input->post('eventdate'),
+					'eventtime' => $this->input->post('eventtime'),
+				);
+
+				$this->db->insert('tblevent' , $data);
 		}
 	}
 ?>
