@@ -9,6 +9,11 @@
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
           <section class="content-header">
             <div class="box-body">
+              <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <h4><i class="icon fa fa-ban"></i> Alert!</h4>
+                successfully added! <a href="<?php echo site_url('subadmin/Event'); ?>">click here to go back to home.</a>
+              </div>
               <div class="alert alert-danger alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 <h4><i class="icon fa fa-ban"></i> Alert!</h4>
@@ -25,27 +30,24 @@
               <form role="form">
                 <div class="box-body">
                   <div class="form-group">
-                    <label>Event title</label>
-                    <input type="text" class="form-control" name="eventtitle" placeholder="Enter Event Title" value = "<?php echo set_value('eventtitle');?>">
+                    <label for="eventtitle">Name</label>
+                    <input type="text" class="form-control" name="eventtitle" id="eventtitle" placeholder="name" value = "<?php echo set_value('eventtitle');?>" required>
                   </div>
                   <div class="form-group">
-                    <label>Event Description</label>
-                    <textarea class="form-control" name="eventdesc" placeholder="Enter Description" value = "<?php echo set_value('eventdesc');?>"></textarea>
+                    <label for="eventdesc">Description</label>
+                    <textarea class="form-control" name="eventdesc" id="eventdesc" placeholder="Description" value = "<?php echo set_value('eventdesc');?>" required></textarea>
                   </div>
                   <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <i class="fa fa-calendar"></i>
-                      </div>
-                      <input type="text" class="form-control" name="eventdate" data-inputmask="'alias': 'yyyy/mm/dd'" placeholder="Event Date" data-mask value = "<?php echo set_value('eventdate');?>">
-                    </div>
+                    <label for="eventvenue">Venue</label>
+                    <input type="text" class="form-control" name="eventvenue" id="eventvenue" placeholder="Venue">
                   </div>
                   <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <i class="fa fa-clock-o"></i>
-                      </div>
-                      <input type="text" class="form-control" name="eventtime" placeholder="h : m A" value = "<?php echo set_value('eventtime');?>">
+                    <label>Date</label>
+                    <input type="text" class="form-control" name="birthdate" placeholder="MM/DD/YYYY" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="eventtime">Time</label>
+                    <input type="text" class="form-control" name="eventtime" id="eventtime" placeholder="1:30 AM" value = "<?php echo set_value('eventtime');?>" required>
                     </div>
                   </div>
                   <div class="form-group ">
@@ -56,7 +58,7 @@
                       <option values="3rd Year">3rd Year</option>
                       <option values="2nd Year">2nd Year</option>
                       <option values="1st Year">1st Year</option>
-                      <option values="Do not send">do not send</option>
+                      <option values="Do not send">send later</option>
                     </select>
                   </div>
                 </div>

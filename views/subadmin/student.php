@@ -38,7 +38,7 @@
                       <td>BSIT 3-R2</td>
                       <td>09165209766</td>
                       <td>
-                        <button type="submit" class="btn btn-primary btn-xs btn-block" data-toggle="modal" data-target="#viewModal"><span class="fa fa-eye"></span></button>
+                        <a href="<?php echo base_url('subadmin/Student/edit_student'); ?>" class="btn btn-success"><span class="fa fa-edit"></span></a>
                       </td>
                     </tr>
                     <tr>
@@ -47,7 +47,7 @@
                       <td>BSIT 3-R2</td>
                       <td>+44(636)-3444501</td>
                       <td>
-                        <button type="submit" class="btn btn-primary btn-xs btn-block" data-toggle="modal" data-target="#viewModal"><span class="fa fa-eye"></span></button>
+                        <a href="<?php echo base_url('subadmin/Student/edit_student'); ?>" class="btn btn-success"><span class="fa fa-edit"></span></a>
                       </td>
                     </tr>
                   </tbody>

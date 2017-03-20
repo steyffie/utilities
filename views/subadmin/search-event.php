@@ -37,9 +37,11 @@
                   <thead>
                     <tr>
                       <th>#</th>
-                      <th>Event Title</th>
+                      <th>Name</th>
                       <th>Description</th>
-                      <th>Held On:</th>
+                      <th>Venue</th>
+                      <th>Date</th>
+                      <th>Time</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -50,23 +52,10 @@
                       <td style="width: 450px;"> 
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                       </td>
-                      <td>00-00-00-00 00-00-00-00</td>
+                      <td>School Grounds</td>
+                      <td>00-00-0000</td>
+                      <td>1:30 AM</td>
                       <td style="width: 150px;">
-                        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#viewModal"><span class="fa fa-eye"></span></button>
-                        <a href="<?php echo base_url('subadmin/Event/edit_event'); ?>" class="btn btn-success"><span class="fa fa-edit"></span></a>
-                        <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"><span class="fa fa-trash"></span></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>IT gathering</td>
-                      <td style="width: 450px;">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.
-                      </td>
-                      <td>00-00-00-00 00-00-00-00</td>
-                      <td style="width: 150px;">
-                        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#viewModal"><span class="fa fa-eye"></span></button>
                         <a href="<?php echo base_url('subadmin/Event/edit_event'); ?>" class="btn btn-success"><span class="fa fa-edit"></span></a>
                         <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"><span class="fa fa-trash"></span></button>
                       </td>
