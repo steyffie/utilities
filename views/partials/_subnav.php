@@ -4,14 +4,14 @@
     <nav class="navbar navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="<?php echo site_url('subadmin/Student'); ?>" class="navbar-brand"><b>SITE</b>Utilities</a>
+          <a href="<?php echo site_url('subadmin/Dashboard'); ?>" class="navbar-brand"><b>SITE</b>Utilities</a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
             <i class="fa fa-bars"></i>
           </button>
         </div>
         <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="<?php echo site_url('subadmin/Student'); ?>">Students Registered</a></li>
+            <li><a href="<?php echo site_url('subadmin/Dashboard'); ?>">Students Registered</a></li>
             <li><a href="<?php echo site_url('subadmin/Event'); ?>">Events</a></li>
           </ul>
         </div>

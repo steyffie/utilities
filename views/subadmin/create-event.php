@@ -9,11 +9,6 @@
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
           <section class="content-header">
             <div class="box-body">
-              <div class="alert alert-success alert-dismissible">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <h4><i class="icon fa fa-ban"></i> Alert!</h4>
-                successfully added! <a href="<?php echo site_url('subadmin/Event'); ?>">click here to go back to home.</a>
-              </div>
               <div class="alert alert-danger alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 <h4><i class="icon fa fa-ban"></i> Alert!</h4>
@@ -30,35 +25,38 @@
               <form role="form">
                 <div class="box-body">
                   <div class="form-group">
-                    <label for="eventtitle">Name</label>
-                    <input type="text" class="form-control" name="eventtitle" id="eventtitle" placeholder="name" value = "<?php echo set_value('eventtitle');?>" required>
+                    <label>Event title</label>
+                    <input type="text" class="form-control"  placeholder="Enter Event Title">
                   </div>
                   <div class="form-group">
-                    <label for="eventdesc">Description</label>
-                    <textarea class="form-control" name="eventdesc" id="eventdesc" placeholder="Description" value = "<?php echo set_value('eventdesc');?>" required></textarea>
+                    <label>Event Description</label>
+                    <textarea class="form-control" placeholder="Enter Description"></textarea>
                   </div>
                   <div class="form-group">
-                    <label for="eventvenue">Venue</label>
-                    <input type="text" class="form-control" name="eventvenue" id="eventvenue" placeholder="Venue">
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                      </div>
+                      <input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" placeholder="Event Date" data-mask>
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label>Date</label>
-                    <input type="text" class="form-control" name="birthdate" placeholder="MM/DD/YYYY" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="eventtime">Time</label>
-                    <input type="text" class="form-control" name="eventtime" id="eventtime" placeholder="1:30 AM" value = "<?php echo set_value('eventtime');?>" required>
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                        <i class="fa fa-clock-o"></i>
+                      </div>
+                      <input type="text" class="form-control" placeholder="h : m A">
                     </div>
                   </div>
                   <div class="form-group ">
                     <label>Send to:</label>
-                    <select class="form-control" name="send">
-                      <option values="SITE">SITE</option>
-                      <option values="4th Year">4th Year</option>
-                      <option values="3rd Year">3rd Year</option>
-                      <option values="2nd Year">2nd Year</option>
-                      <option values="1st Year">1st Year</option>
-                      <option values="Do not send">send later</option>
+                    <select class="form-control">
+                      <option>SITE</option>
+                      <option>4th Year</option>
+                      <option>3rd Year</option>
+                      <option>2nd Year</option>
+                      <option>1st Year</option>
+                      <option>do not send</option>
                     </select>
                   </div>
                 </div>
