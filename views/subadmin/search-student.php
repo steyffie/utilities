@@ -16,7 +16,7 @@
                   <input type="text" name="table_search" class="form-control pull-right" placeholder="Search Student">
 
                   <div class="input-group-btn">
-                    <a href="<?php echo site_url('subadmin/Student/search_student');?>" class="btn btn-default"><i class="fa fa-search"></i></a>
+                    <a href="<?php echo site_url('subadmin/Dashboard/search_student');?>" class="btn btn-default"><i class="fa fa-search"></i></a>
                   </div>
                 </div>
               </div>

@@ -24,9 +24,9 @@
 		public function create_event(){
 
 			$this->load->library('form_validation');
-			$this->form_validation->set_rules('eventtitle', 'eventtitle', 'trim|required|min_length[5]|max_length[20]');
-			$this->form_validation->set_rules('eventdesc', 'eventdesc', 'trim|required|min_length[5]|max_length[10]');
-			$this->form_validation->set_rules('eventdate', 'eventdate', 'trim|required|min_length[5]|max_length[10]');
+			$this->form_validation->set_rules('eventtitle', 'EventTitle', 'trim|required|min_length[5]|max_length[20]');
+			$this->form_validation->set_rules('eventdesc', 'EventDesc', 'trim|required|min_length[5]|max_length[10]');
+			$this->form_validation->set_rules('eventdate', 'EventDate', 'trim|required|min_length[5]|max_length[10]');
 			$this->form_validation->set_rules('send', 'Send', 'trim|required');
 
 			if($this->form_validation->run() == FALSE){

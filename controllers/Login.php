@@ -20,8 +20,8 @@ class Login extends CI_Controller
 			  if($data['level']== "2"){
 
 			  	$data = [
-	 				'title' => 'SITE',
-		 			'content' => 'subadmin/student',
+	 				'title' => 'SITE Dashboard',
+		 			'content' => 'subadmin/dashboard',
 		 			'class' => 'hold-transition skin-blue layout-top-nav',
 		 			'nav' => 'partials/_subnav',
 		 			'classFooter' => 'partials/clsfooter'
@@ -33,8 +33,8 @@ class Login extends CI_Controller
 			else if ($data['level']== "1"){
 
 				$data = [
-			 		'title' => 'SITE',
-			 		'content' => 'superadmin/admin',
+			 		'title' => 'SITE Dashboard',
+			 		'content' => 'superadmin/dashboard',
 			 		'class' => 'hold-transition skin-blue layout-top-nav',
 			 		'nav' => 'partials/_supnav',
 			 		'classFooter' => 'partials/clsfooter'
@@ -46,8 +46,8 @@ class Login extends CI_Controller
 			else{
 
 				$data = [
-			 		'title' => 'SITE',
-			 		'content' => 'superadmin/admin',
+			 		'title' => 'SITE Dashboard',
+			 		'content' => 'superadmin/dashboard',
 			 		'class' => 'hold-transition skin-blue layout-top-nav',
 			 		'nav' => 'partials/_supnav',
 			 		'classFooter' => 'partials/clsfooter'
